@@ -1,0 +1,85 @@
+SWIPE RIGHT CLEANING LLC — GOOGLE CALENDAR WALKTHROUGH SETUP
+============================================================
+
+The website now includes a dedicated booking page at:
+
+  booking.html
+
+The page is ready to display your Google Calendar appointment schedule, but the
+appointment schedule itself must be created inside your Google Calendar account.
+
+RECOMMENDED APPOINTMENT SETTINGS
+--------------------------------
+Title:
+  Free Commercial Cleaning Walkthrough
+
+Duration:
+  30 minutes
+
+Suggested availability:
+  - Weekday evenings
+  - Saturday mornings
+  - Add limited earlier daytime openings only when you are available for select services
+
+Buffer time:
+  30 minutes for driving and notes between appointments
+
+Location:
+  In-person meeting
+
+Description to paste:
+  Book a free on-site walkthrough with Swipe Right Cleaning LLC. We will review
+  your facility, discuss the cleaning services and schedule you need, and gather
+  the information required to prepare a customized proposal. Please do not enter
+  alarm codes, keys, financial information, or other sensitive access details in
+  the public booking form.
+
+BOOKING FORM QUESTIONS
+----------------------
+Google already requires first name, last name, and email. Add these questions:
+
+  1. Business name — required
+  2. Facility address — required
+  3. Phone number — required
+  4. Exact or estimated square footage — required
+  5. Type of cleaning needed — required
+  6. Access or parking instructions — optional
+
+You may also turn on email verification to reduce spam bookings.
+
+CREATE THE APPOINTMENT SCHEDULE
+-------------------------------
+1. On a computer, open Google Calendar with your business account.
+2. Click Create.
+3. Select Appointment schedule.
+4. Enter the title, duration, availability, buffer time, location, description,
+   and booking-form questions shown above.
+5. Save the schedule.
+
+CONNECT IT TO THE WEBSITE
+-------------------------
+1. In Google Calendar, find the schedule under Booking pages.
+2. Hover over it and choose Options.
+3. Choose Sharing options, then Website embed.
+4. Choose A single booking page.
+5. Choose Inline booking page.
+6. Click Copy code.
+7. In the copied code, find the URL inside src="...".
+8. Open script.js in Notepad.
+9. Find this line at the top:
+
+   const GOOGLE_CALENDAR_BOOKING_URL = "https://calendar.google.com/appointments/schedules/AcZssZ1fMzj4XxUF-mb0xfKrXAucb7ewb6Y3YXQknHpyF_KqLURYlcZSNXCy7s2oix2Cxd81KK6mp7sA";
+
+10. Paste the URL between the quotation marks, for example:
+
+   const GOOGLE_CALENDAR_BOOKING_URL =
+     "https://calendar.google.com/calendar/appointments/schedules/EXAMPLE?gv=true";
+
+11. Save script.js and refresh booking.html.
+12. Test the page on desktop and mobile before publishing.
+
+PUBLISHING THE UPDATE
+---------------------
+Upload all updated files to the same GitHub repository, including the new
+booking.html file. Replace the older index.html, styles.css, script.js,
+START-HERE.txt, and README.md. Keep the assets folder.

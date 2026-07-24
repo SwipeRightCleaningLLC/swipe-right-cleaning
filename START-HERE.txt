@@ -1,0 +1,67 @@
+SWIPE RIGHT CLEANING LLC WEBSITE — START HERE
+==============================================
+
+1. PREVIEW THE WEBSITE
+----------------------
+Open index.html to preview the home page.
+Open booking.html to preview the new inspection-booking page.
+
+For the best local preview, open a terminal in this folder and run:
+
+  python -m http.server 8000
+
+Then visit:
+
+  http://localhost:8000
+
+2. QUOTE FORM UPDATE
+--------------------
+The quote form now asks whether the customer knows the exact square footage.
+
+- If the customer selects Yes, an exact square-footage field appears.
+- If the customer selects No or Not sure, an estimated range appears.
+- The prepared quote email clearly labels the number as exact or estimated.
+
+The form opens the customer's email app with the completed information addressed
+to quotes@swiperightcleaningllc.com. Confirm that this email address receives mail
+before publishing it publicly.
+
+3. GOOGLE CALENDAR BOOKING PAGE
+-------------------------------
+The website includes booking.html, but you still need to create the Google
+Calendar appointment schedule and connect its inline booking URL.
+
+Follow BOOKING-SETUP.txt for the exact settings and connection steps.
+
+4. BUSINESS DETAILS CURRENTLY SHOWN
+-----------------------------------
+- Phone: (972) 244-3364
+- General inquiries: info@swiperightcleaningllc.com
+- Quote requests: quotes@swiperightcleaningllc.com
+- Customer contact hours: Monday–Friday, 9 AM–5 PM; Saturday, 9 AM–3 PM
+- Cleaning focus: primarily evenings and weekends
+- Select services and walkthroughs may be available earlier by appointment
+- Service area: Plano and surrounding North Dallas communities
+
+5. PUBLISHING WITH GITHUB PAGES
+-------------------------------
+Upload all files and the complete assets folder to your existing GitHub
+repository. Replace the old files and include the new booking.html file.
+
+GitHub Pages can take several minutes to publish the update. Test both:
+
+  index.html
+  booking.html
+
+After publishing, add the website URL to your Google Business Profile.
+
+6. IMPORTANT
+------------
+- Do not publish claims such as insured or bonded until they are true.
+- Do not collect alarm codes or other sensitive access information through forms.
+- Replace generated images with genuine photos of your work as you complete jobs.
+
+
+GOOGLE CALENDAR BOOKING
+-----------------------
+The Book a Walkthrough page is connected to your Google Calendar appointment schedule. Test both the embedded calendar and the Open Booking Calendar button after publishing.
