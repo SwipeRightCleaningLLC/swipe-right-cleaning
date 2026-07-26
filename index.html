@@ -113,49 +113,83 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Our Services</p>
-          <h2>Practical cleaning services for your workplace</h2>
-          <p>Choose the tasks and schedule your facility needs. Final service details are confirmed in your customized proposal.</p>
+          <h2>Straightforward cleaning options for your workplace</h2>
+          <p>Choose the main cleaning service your facility needs. Optional add-ons can be included in your customized quote.</p>
         </div>
 
         <div class="card-grid">
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">01</div>
-            <h3>Routine Office Cleaning</h3>
+            <h3>Recurring Office Cleaning</h3>
+            <p class="service-summary">Reliable ongoing cleaning customized around your workplace and schedule.</p>
             <ul>
+              <li>Emptying trash and replacing liners</li>
               <li>Dusting accessible surfaces</li>
-              <li>Vacuuming carpeted areas</li>
-              <li>Mopping hard floors</li>
-              <li>Trash removal and liner replacement</li>
-              <li>High-touch surface cleaning</li>
+              <li>Vacuuming carpets</li>
+              <li>Sweeping and mopping hard floors</li>
+              <li>Cleaning and disinfecting restrooms</li>
+              <li>Cleaning breakrooms and kitchen areas</li>
+              <li>Wiping desks when surfaces are clear</li>
+              <li>Cleaning entrance doors and glass</li>
+              <li>Cleaning high-touch areas</li>
+              <li>Monitoring and restocking customer-provided restroom and breakroom supplies</li>
             </ul>
+            <p class="service-schedule"><strong>Available schedules:</strong> Daily, multiple visits per week, weekly, or biweekly.</p>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">02</div>
-            <h3>Restrooms &amp; Breakrooms</h3>
+            <h3>One-Time Deep Cleaning</h3>
+            <p class="service-summary">Detailed cleaning for spaces that need extra attention or preparation before recurring service.</p>
             <ul>
-              <li>Toilets, sinks, counters, and mirrors</li>
-              <li>Fixtures and touchpoints</li>
-              <li>Breakroom tables and counters</li>
-              <li>Appliance exterior cleaning</li>
-              <li>Floor cleaning</li>
+              <li>Detailed dusting of accessible surfaces</li>
+              <li>Baseboard cleaning</li>
+              <li>Heavy restroom cleaning</li>
+              <li>Breakroom and kitchen detailing</li>
+              <li>Cleaning doors, handles, and light switches</li>
+              <li>Removing buildup from accessible surfaces</li>
+              <li>Detailed vacuuming, sweeping, and mopping</li>
+              <li>Cleaning entrance doors and glass</li>
             </ul>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">03</div>
-            <h3>Additional Services</h3>
+            <h3>Move-In &amp; Move-Out Cleaning</h3>
+            <p class="service-summary">Detailed cleaning before moving in, moving out, opening, or turning over a commercial space.</p>
             <ul>
-              <li>One-time deep cleaning</li>
-              <li>Lobby and common-area cleaning</li>
-              <li>Commercial move-in or move-out cleaning</li>
-              <li>Multi-tenant common areas</li>
-              <li>Evening and weekend cleaning</li>
+              <li>Cleaning empty offices and work areas</li>
+              <li>Cleaning inside cabinets and drawers</li>
+              <li>Cleaning restrooms and breakrooms</li>
+              <li>Dusting accessible surfaces</li>
+              <li>Cleaning doors and entrance glass</li>
+              <li>Cleaning floors and baseboards</li>
+              <li>Removing light dust and cleaning-related debris</li>
+              <li>Preparing the space for employees, customers, or the next tenant</li>
             </ul>
           </article>
         </div>
 
-        <p class="pricing-note">Pricing is based on square footage, cleaning frequency, facility condition, number of restrooms, and requested tasks.</p>
+        <div class="service-addons" aria-labelledby="addons-title">
+          <div class="service-addons-heading">
+            <p class="eyebrow">Optional Add-Ons</p>
+            <h3 id="addons-title">Add extra services to your cleaning plan</h3>
+            <p>Add-on availability and pricing are confirmed during the walkthrough and included in your quote.</p>
+          </div>
+          <ul class="addon-grid">
+            <li>Inside cabinet and drawer cleaning</li>
+            <li>Baseboard detailing</li>
+            <li>Carpet spot cleaning</li>
+            <li>Additional disinfecting of high-touch surfaces</li>
+            <li>Event preparation cleaning</li>
+            <li>Post-event cleanup</li>
+            <li>Extra breakroom detailing</li>
+            <li>Restroom and breakroom supply service</li>
+          </ul>
+          <p class="supply-service-note"><strong>Restroom and breakroom supply service:</strong> Upon request, Swipe Right Cleaning LLC can purchase, deliver, and restock approved supplies. Supply costs and any applicable service fees will be included in the quote.</p>
+        </div>
+
+        <p class="pricing-note">Pricing is based on facility size, cleaning frequency, current condition, number of restrooms, floor types, requested services, required supplies, and preferred schedule.</p>
       </div>
     </section>
 
@@ -330,10 +364,10 @@
                 <select name="frequency" required>
                   <option value="">Select one</option>
                   <option>One-time service</option>
-                  <option>Once per week</option>
-                  <option>Twice per week</option>
-                  <option>Three times per week</option>
-                  <option>Five times per week</option>
+                  <option>Daily</option>
+                  <option>Multiple visits per week</option>
+                  <option>Weekly</option>
+                  <option>Biweekly</option>
                   <option>Unsure</option>
                 </select>
               </label>
@@ -345,7 +379,7 @@
                   <option>Weekday evenings</option>
                   <option>Overnight</option>
                   <option>Weekends</option>
-                  <option>Select daytime service</option>
+                  <option>Daytime service by appointment</option>
                   <option>Flexible</option>
                 </select>
               </label>
@@ -369,22 +403,30 @@
             </div>
 
             <fieldset class="services-fieldset">
-              <legend>Services requested *</legend>
-              <div class="checkbox-grid">
-                <label><input type="checkbox" name="services" value="Routine office cleaning"> <span>Routine office cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Restroom cleaning"> <span>Restroom cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Breakroom cleaning"> <span>Breakroom cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Trash removal and liner replacement"> <span>Trash removal and liner replacement</span></label>
-                <label><input type="checkbox" name="services" value="Vacuuming and floor mopping"> <span>Vacuuming and floor mopping</span></label>
-                <label><input type="checkbox" name="services" value="Dusting and surface cleaning"> <span>Dusting and surface cleaning</span></label>
-                <label><input type="checkbox" name="services" value="High-touch surface cleaning"> <span>High-touch surface cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Lobby and common-area cleaning"> <span>Lobby and common-area cleaning</span></label>
+              <legend>Cleaning service requested *</legend>
+              <p class="fieldset-helper">Recurring office cleaning already includes routine office, restroom, breakroom, trash, floor, dusting, and high-touch cleaning.</p>
+              <div class="checkbox-grid service-choice-grid">
+                <label><input type="checkbox" name="services" value="Recurring office cleaning"> <span>Recurring office cleaning</span></label>
                 <label><input type="checkbox" name="services" value="One-time deep cleaning"> <span>One-time deep cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Commercial move-in or move-out cleaning"> <span>Commercial move-in or move-out cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Multi-tenant common-area cleaning"> <span>Multi-tenant common-area cleaning</span></label>
-                <label><input type="checkbox" name="services" value="Other"> <span>Other</span></label>
+                <label><input type="checkbox" name="services" value="Commercial move-in and move-out cleaning"> <span>Commercial move-in and move-out cleaning</span></label>
               </div>
               <p id="services-error" class="field-error" role="alert"></p>
+            </fieldset>
+
+            <fieldset class="services-fieldset addon-fieldset">
+              <legend>Optional add-on services</legend>
+              <p class="fieldset-helper">Select any add-ons you would like included in your quote. Leave this section blank if none are needed.</p>
+              <div class="checkbox-grid">
+                <label><input type="checkbox" name="addons" value="Inside cabinet and drawer cleaning"> <span>Inside cabinet and drawer cleaning</span></label>
+                <label><input type="checkbox" name="addons" value="Baseboard detailing"> <span>Baseboard detailing</span></label>
+                <label><input type="checkbox" name="addons" value="Carpet spot cleaning"> <span>Carpet spot cleaning</span></label>
+                <label><input type="checkbox" name="addons" value="Additional disinfecting of high-touch surfaces"> <span>Additional disinfecting of high-touch surfaces</span></label>
+                <label><input type="checkbox" name="addons" value="Event preparation cleaning"> <span>Event preparation cleaning</span></label>
+                <label><input type="checkbox" name="addons" value="Post-event cleanup"> <span>Post-event cleanup</span></label>
+                <label><input type="checkbox" name="addons" value="Extra breakroom detailing"> <span>Extra breakroom detailing</span></label>
+                <label><input type="checkbox" name="addons" value="Restroom and breakroom supply service"> <span>Restroom and breakroom supply service</span></label>
+              </div>
+              <p class="fieldset-helper supply-helper">The supply service means Swipe Right Cleaning LLC can purchase, deliver, and restock approved supplies. Supply costs and any applicable service fees will be included in your quote.</p>
             </fieldset>
 
             <div class="form-grid">
@@ -396,7 +438,7 @@
 
               <label class="form-field form-field-full">
                 <span>Additional details</span>
-                <textarea name="additionalDetails" rows="5" placeholder="Tell us about special requests, access requirements, flooring types, or anything else we should know."></textarea>
+                <textarea name="additionalDetails" rows="5" placeholder="Tell us about access requirements, flooring types, supply preferences, or anything else we should know."></textarea>
               </label>
             </div>
 

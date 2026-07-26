@@ -113,6 +113,14 @@ p { margin-top: 0; }
 .service-icon { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 22px; color: var(--white); background: var(--teal-dark); border-radius: 14px; font-size: .82rem; font-weight: 900; }
 .service-card ul { margin: 0; padding-left: 20px; color: var(--ink-soft); }
 .service-card li + li { margin-top: 7px; }
+.service-summary { margin: -4px 0 18px; color: var(--ink-soft); font-size: .94rem; }
+.service-schedule { margin: 20px 0 0; padding-top: 16px; color: var(--ink-soft); border-top: 1px solid var(--line); font-size: .9rem; }
+.service-addons { margin-top: 24px; padding: clamp(26px, 4vw, 38px); background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 12px 28px rgba(24,37,45,.06); }
+.service-addons-heading { max-width: 760px; margin-bottom: 22px; }
+.service-addons-heading h3 { margin-bottom: 8px; }
+.service-addons-heading > p:last-child { margin: 0; color: var(--ink-soft); }
+.addon-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 30px; margin: 0; padding-left: 20px; color: var(--ink-soft); }
+.supply-service-note { margin: 24px 0 0; padding: 16px 18px; color: var(--ink-soft); background: #eaf4f5; border-left: 4px solid var(--teal); border-radius: 10px; }
 .pricing-note { max-width: 850px; margin: 30px auto 0; padding: 18px 22px; color: var(--ink-soft); background: #eaf4f5; border-left: 4px solid var(--teal); border-radius: 10px; text-align: center; }
 
 .after-hours { overflow: hidden; }
@@ -225,7 +233,11 @@ p { margin-top: 0; }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--teal-dark); box-shadow: 0 0 0 3px rgba(8,127,138,.14); }
 .form-field small { color: var(--ink-soft); font-size: .8rem; line-height: 1.45; }
 .services-fieldset { margin: 24px 0; padding: 0; border: 0; }
-.services-fieldset legend { margin-bottom: 11px; }
+.services-fieldset legend { margin-bottom: 7px; }
+.fieldset-helper { margin: 0 0 12px; color: var(--ink-soft); font-size: .82rem; line-height: 1.5; }
+.supply-helper { margin-top: 12px; padding: 12px 14px; background: #eaf4f5; border-left: 3px solid var(--teal); border-radius: 8px; }
+.addon-fieldset { padding-top: 22px; border-top: 1px solid var(--line); }
+.service-choice-grid { grid-template-columns: 1fr; }
 .checkbox-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .checkbox-grid label, .consent-field { display: flex; align-items: flex-start; gap: 9px; padding: 11px 12px; background: var(--off-white); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
 .checkbox-grid input, .consent-field input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--teal-dark); flex: 0 0 auto; }
@@ -237,7 +249,7 @@ p { margin-top: 0; }
 .form-status { min-height: 1.5em; margin: 12px 0 0; color: var(--teal-dark); font-size: .88rem; font-weight: 750; text-align: center; }
 
 @media (max-width: 680px) {
-  .form-grid, .checkbox-grid { grid-template-columns: 1fr; }
+  .form-grid, .checkbox-grid, .addon-grid { grid-template-columns: 1fr; }
   .form-field-full { grid-column: auto; }
   .quote-form { padding: 24px 18px; }
 }

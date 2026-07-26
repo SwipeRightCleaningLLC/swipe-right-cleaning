@@ -66,6 +66,8 @@ quoteForm?.addEventListener("submit", (event) => {
 
   const selectedServices = [...quoteForm.querySelectorAll('input[name="services"]:checked')]
     .map((input) => input.value);
+  const selectedAddons = [...quoteForm.querySelectorAll('input[name="addons"]:checked')]
+    .map((input) => input.value);
 
   if (selectedServices.length === 0) {
     servicesError.textContent = "Please select at least one requested service.";
@@ -111,7 +113,8 @@ quoteForm?.addEventListener("submit", (event) => {
     `Preferred service timing: ${cleanValue(data.get("serviceTiming"))}`,
     `Preferred cleaning days and times: ${cleanValue(data.get("preferredSchedule"))}`,
     `Current condition of the property: ${cleanValue(data.get("propertyCondition"))}`,
-    `Services requested: ${selectedServices.join(", ")}`,
+    `Cleaning service requested: ${selectedServices.join(", ")}`,
+    `Optional add-ons: ${selectedAddons.length ? selectedAddons.join(", ") : "None selected"}`,
     `Preferred walkthrough date: ${cleanValue(data.get("walkthroughDate")) || "Not provided"}`,
     "",
     "Additional details:",
