@@ -8,7 +8,7 @@
   Copy only the URL from the iframe's src="..." and paste it between the quotation marks below.
 */
 const GOOGLE_CALENDAR_BOOKING_URL = "https://calendar.google.com/appointments/schedules/AcZssZ1fMzj4XxUF-mb0xfKrXAucb7ewb6Y3YXQknHpyF_KqLURYlcZSNXCy7s2oix2Cxd81KK6mp7sA";
-
+const QUOTE_FORM_ENDPOINT = "https://formspree.io/f/mwvgjgko";
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector("#site-menu");
 
@@ -61,7 +61,7 @@ const updateSquareFootageFields = () => {
 squareFootageKnown?.addEventListener("change", updateSquareFootageFields);
 updateSquareFootageFields();
 
-quoteForm?.addEventListener("submit", (event) => {
+quoteForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const selectedServices = [...quoteForm.querySelectorAll('input[name="services"]:checked')]
@@ -124,15 +124,58 @@ quoteForm?.addEventListener("submit", (event) => {
   ];
 
   const body = lines.join("\n");
-  const mailtoUrl = `mailto:quotes@swiperightcleaningllc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+ const submitButton = quoteForm.querySelector('button[type="submit"]');
 
-  formStatus.textContent = "Opening your email app. Review the prepared message and press Send to complete your request.";
+data.append("_subject", subject);
+data.append("message", body);
+data.append("requestedServices", selectedServices.join(", "));
+data.append(
+  "requestedAddons",
+  selectedAddons.length
+    ? selectedAddons.join(", ")
+    : "None selected"
+);
 
-  if (navigator.clipboard?.writeText) {
-    navigator.clipboard.writeText(body).catch(() => {});
+formStatus.textContent = "Sending your quote request...";
+
+if (submitButton) {
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending Request...";
+}
+
+try {
+  const response = await fetch(QUOTE_FORM_ENDPOINT, {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    const result = await response.json().catch(() => null);
+
+    const errorMessage =
+      result?.errors
+        ?.map((error) => error.message)
+        .join(" ") ||
+      "Your request could not be sent. Please try again.";
+
+    throw new Error(errorMessage);
   }
 
-  window.location.href = mailtoUrl;
+  window.location.href = "thank-you.html";
+} catch (error) {
+  formStatus.textContent =
+    error instanceof Error
+      ? error.message
+      : "Your request could not be sent. Please try again.";
+
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Quote Request";
+  }
+}
 });
 
 quoteForm?.querySelectorAll('input[name="services"]').forEach((checkbox) => {
