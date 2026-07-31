@@ -104,7 +104,7 @@ quoteForm?.addEventListener("submit", async (event) => {
     `Company name: ${companyName}`,
     `Phone number: ${cleanValue(data.get("phone"))}`,
     `Email: ${cleanValue(data.get("email"))}`,
-    `Property address or ZIP code: ${cleanValue(data.get("propertyLocation"))}`,
+    `Property address: ${cleanValue(data.get("propertyLocation"))}`,
     `Type of facility: ${cleanValue(data.get("facilityType"))}`,
     `Knows exact square footage: ${squareFootageAnswer}`,
     `Square footage: ${squareFootageSummary}`,
